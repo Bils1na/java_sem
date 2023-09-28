@@ -17,7 +17,7 @@ public class MainClassHomeworkOne {
 
         String file = "C:\\Users\\ЯмиляАртемий\\IdeaProjects\\seminars_java\\src\\main\\java\\homeworkI\\input.txt"; // task 4
         String taskFourResult = task4(file);
-        System.out.println();
+        System.out.println("\nTask 4: ");
         System.out.println(taskFourResult);
     }
 
