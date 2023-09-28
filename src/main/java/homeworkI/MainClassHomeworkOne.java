@@ -3,8 +3,6 @@ package homeworkI;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class MainClassHomeworkOne {
     public static void main(String[] args) throws IOException {
@@ -94,25 +92,14 @@ public class MainClassHomeworkOne {
 //        Result: 5 + 4 = 9
 
         BufferedReader br = new BufferedReader(new FileReader(str)); // открываем файл для чтения
-        Pattern pattern = Pattern.compile("(.+)");
-        String line;
-        while((line = br.readLine()) != null) {
-            Matcher matcher = pattern.matcher(line);
-            if (matcher.find()) {
-                String equation = matcher.group(1);
-                br.close();
-                return solveEquation(equation);
-            }
-        }
+        String line = br.readLine();
         br.close();
-        return "No solution.";
-    }
 
-    public static String solveEquation(String equation) {
-        String[] parts = equation.split("\\s*[+=]\\s*");
+        String[] parts = line.split("\\s*[+=]\\s*");
         String firstPart = parts[0];
         String secondPart = parts[1];
         String thirdPart = parts[2];
+
         for (char digit = '0'; digit <= '9'; digit++) {
             String firstPartWithDigit = firstPart.replace("?", String.valueOf(digit));
             for (char digitOne = '0'; digitOne <= '9'; digitOne++) {
@@ -121,7 +108,7 @@ public class MainClassHomeworkOne {
                 int secondValue = Integer.parseInt(secondPartWithDigit);
                 int thirdValue = Integer.parseInt(thirdPart);
                 if (firstValue + secondValue == thirdValue) {
-                    return "Given the equation: " + equation + "\nResult: " +
+                    return "Given the equation: " + line + "\nResult: " +
                             firstPartWithDigit + " + " + secondPartWithDigit + " = " +
                             thirdPart;
                 }
