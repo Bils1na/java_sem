@@ -15,7 +15,7 @@ public class MainClassHomeworkOne {
         int taskThreeResult = task3('+', 1, 4);
         System.out.printf("Task 3: %d", taskThreeResult); // task3
 
-        String file = "C:\\Users\\ЯмиляАртемий\\IdeaProjects\\seminars_java\\src\\main\\java\\homeworkI\\input.txt"; // task 4
+        String file = "input.txt"; // task 4
         String taskFourResult = task4(file);
         System.out.println("\nTask 4: ");
         System.out.println(taskFourResult);
