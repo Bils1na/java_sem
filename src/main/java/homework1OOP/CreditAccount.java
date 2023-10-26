@@ -2,10 +2,11 @@ package homework1OOP;
 
 public class CreditAccount extends Account {
 
-    private percent;
+    private double percent;
 
     public CreditAccount() {
-        super(CreditAccount.value)
+        super(0);
+        this.percent = 0.01;
     }
 
 }
