@@ -9,24 +9,42 @@ public class Account {
      */
 
     public Account(double value) {
-        this.balance = value;
+        setBalance(value);
     }
 
     public Account() {
+
         this(0);
     }
 
     // Methods put, take and getAmount
     public void put(double value) {
-        this.balance += value;
+        this.balance += checkValue(value);
+
     }
 
     public void take(double value) {
-        this.balance -= value;
+        this.balance -= checkValue(value);
     }
 
     public String getAmount() {
         return String.format("Balance: %s$", this.balance);
+    }
+
+    public void setBalance(double value) {
+        if (value >= 0) {
+            this.balance = value;
+        } else {
+            throw new IllegalArgumentException("Value < 0");
+        }
+    }
+
+    public double checkValue(double value) {
+        if (value >= 0) {
+            return value;
+        } else {
+            throw new IllegalArgumentException("Value < 0");
+        }
     }
 
 }
