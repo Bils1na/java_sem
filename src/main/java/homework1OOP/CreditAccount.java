@@ -16,7 +16,8 @@ public class CreditAccount extends Account {
 
     @Override
     public void take(double value) {
-        super.balance -= value + getPercent(value);
+
+        super.balance -= checkValue(value) + getPercent(value);
     }
 
     private double getPercent(double value) {

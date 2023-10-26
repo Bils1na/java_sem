@@ -17,11 +17,11 @@ public class DepositAccount extends Account {
     @Override
     public void take(double value) {
         if (lastTake.isEmpty()) {
-            super.balance -= value;
+            super.balance -= checkValue(value);
             lastTake.push(LocalDate.now());
         } else {
             if (LocalDate.now().getMonth() != lastTake.pop().getMonth()) {
-                super.balance -= value;
+                super.balance -= checkValue(value);
                 lastTake.push(LocalDate.now());
             } else {
                 System.out.println("You already have 1 take this month.");
