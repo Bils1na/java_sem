@@ -23,7 +23,7 @@ public class Program() {
         Account account1 = new Account(100.95);
         Account account2 = new Account();
         System.out.println(account1.getAmount());
-        System.out.println(account2.getAmount());
+        System.out.println(account2.getAmount()));
 
         account2.put(215.43);
         account1.take(57.99);

@@ -9,4 +9,13 @@ public class CreditAccount extends Account {
         this.percent = 0.01;
     }
 
+    @Override
+    public void take(double value) {
+        super.balance -= value + getPercent(value);
+    }
+
+    private double getPercent(double value) {
+        return value * this.percent;    
+    }
+
 }
