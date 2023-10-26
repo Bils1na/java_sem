@@ -1,6 +1,6 @@
 package homework1OOP;
 
-public class Program() {
+public class Program {
     /*
    * 1. Создать класс "Счет в банке" - Account.
    * У этого класса должно быть поле с текущим балансом на счете.
@@ -20,16 +20,34 @@ public class Program() {
    */
 
     public static void main(String[] args) {
-        Account account1 = new Account(100.95);
+        Account account1 = new Account(100.10);
         Account account2 = new Account();
-        System.out.println(account1.getAmount());
-        System.out.println(account2.getAmount()));
 
-        account2.put(215.43);
-        account1.take(57.99);
-        System.out.println(account1.getAmount());
-        System.out.println(account2.getAmount());
+        System.out.println("-------Origin--------");
+        System.out.println(String.format("Owner 1. %s", account1.getAmount()));
+        System.out.println(String.format("Owner 2. %s", account2.getAmount()));
+        account1.take(50.05);
+        account2.put(215.40);
+        System.out.println(String.format("Owner 1. %s", account1.getAmount()));
+        System.out.println(String.format("Owner 2. %s", account2.getAmount()));
 
+
+        CreditAccount creditAccount1 = new CreditAccount(105.00);
+
+        System.out.println("-------Credit--------");
+        System.out.println(String.format("Owner 1. %s", creditAccount1.getAmount()));
+        creditAccount1.take(55);
+        System.out.println(String.format("Owner 1. %s", creditAccount1.getAmount()));
+
+
+        DepositAccount depositAccount1 = new DepositAccount(100);
+
+        System.out.println("---------Deposit--------");
+        System.out.println(String.format("Owner 1. %s", depositAccount1.getAmount()));
+        depositAccount1.take(50);
+        System.out.println(String.format("Owner 1. %s", depositAccount1.getAmount()));
+        depositAccount1.take(50);
+        System.out.println(String.format("Owner 1. %s", depositAccount1.getAmount()));
     }
 
 }

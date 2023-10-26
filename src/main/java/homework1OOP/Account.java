@@ -1,7 +1,8 @@
 package homework1OOP;
 
-public class Account() {
-    private double balance;
+public class Account {
+    protected double balance;
+
     /**
      * Это счет в банке.
      * @param value Это значение передает сумму на счете. Параметр типа double.
@@ -25,7 +26,7 @@ public class Account() {
     }
 
     public String getAmount() {
-        return String.format("Balance: %s", this.balance);
+        return String.format("Balance: %s$", this.balance);
     }
 
 }
