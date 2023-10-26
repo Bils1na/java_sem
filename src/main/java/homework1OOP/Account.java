@@ -1,11 +1,11 @@
 package homework1OOP;
 
 public class Account() {
+    private double balance;
     /**
      * Это счет в банке.
      * @param value Это значение передает сумму на счете. Параметр типа double.
      */
-    private double balance;
 
     public Account(double value) {
         this.balance = value;
@@ -15,6 +15,7 @@ public class Account() {
         this(0);
     }
 
+    // Methods put, take and getAmount
     public void put(double value) {
         this.balance += value;
     }
@@ -24,7 +25,7 @@ public class Account() {
     }
 
     public String getAmount() {
-        return String.format("Balance: %s", balance);
+        return String.format("Balance: %s", this.balance);
     }
 
 }
