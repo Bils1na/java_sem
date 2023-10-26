@@ -13,7 +13,6 @@ public class Account {
     }
 
     public Account() {
-
         this(0);
     }
 
