@@ -19,7 +19,6 @@ public class Account {
     // Methods put, take and getAmount
     public void put(double value) {
         this.balance += checkValue(value);
-
     }
 
     public void take(double value) {

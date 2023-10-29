@@ -11,7 +11,6 @@ public class CreditAccount extends Account {
 
     public CreditAccount() {
         super(0);
-        this.percent = 0.01;
     }
 
     @Override
