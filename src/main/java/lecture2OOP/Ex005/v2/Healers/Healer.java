@@ -1,6 +1,6 @@
-package Lesson_08.Ex005.v2.Healers;
+package lecture2OOP.Ex005.v2.Healers;
 
-import Lesson_08.Ex005.v2.Hero;
+import lecture2OOP.Ex005.v2.Hero;
 
 public interface Healer {
     

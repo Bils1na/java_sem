@@ -1,4 +1,4 @@
-package Lesson_08.Ex005.v1.Warriors;
+package lecture2OOP.Ex005.v1.Warriors;
 
 public class Paladin extends Warrior {
     

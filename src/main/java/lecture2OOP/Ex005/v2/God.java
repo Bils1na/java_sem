@@ -1,7 +1,7 @@
-package Lesson_08.Ex005.v2;
+package lecture2OOP.Ex005.v2;
 
-import Lesson_08.Ex005.v2.Healers.Healer;
-import Lesson_08.Ex005.v2.Warriors.Warrior;
+import lecture2OOP.Ex005.v2.Healers.Healer;
+import lecture2OOP.Ex005.v2.Warriors.Warrior;
 
 public class God extends Hero implements Healer, Warrior {
 

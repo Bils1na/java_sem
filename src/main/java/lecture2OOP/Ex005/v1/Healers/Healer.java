@@ -1,6 +1,6 @@
-package Lesson_08.Ex005.v1.Healers;
+package lecture2OOP.Ex005.v1.Healers;
 
-import Lesson_08.Ex005.v1.Hero;
+import lecture2OOP.Ex005.v1.Hero;
 
 public abstract class Healer extends Hero {
     

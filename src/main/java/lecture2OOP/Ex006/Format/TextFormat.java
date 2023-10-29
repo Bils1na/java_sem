@@ -1,6 +1,6 @@
-package Lesson_08.Ex006.Format;
+package lecture2OOP.Ex006.Format;
 
-import Lesson_08.Ex006.Interface.Saveable;
+import lecture2OOP.Ex006.Interface.Saveable;
 
 public abstract class TextFormat implements Saveable {
 }
