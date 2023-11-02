@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.util.Stack;
 
 public class DepositAccount extends Account {
-    private Stack<LocalDate> lastTake = new Stack<>();
+    private LocalDate lastTake = null;
 
     public DepositAccount(double value) {
         super(value);
@@ -16,16 +16,11 @@ public class DepositAccount extends Account {
 
     @Override
     public void take(double value) {
-        if (lastTake.isEmpty()) {
+        if (lastTake == null || LocalDate.now().getMonth() != lastTake.getMonth()) {
             super.balance -= checkValue(value);
-            lastTake.push(LocalDate.now());
+            lastTake = LocalDate.now();
         } else {
-            if (LocalDate.now().getMonth() != lastTake.pop().getMonth()) {
-                super.balance -= checkValue(value);
-                lastTake.push(LocalDate.now());
-            } else {
-                System.out.println("You already have 1 take this month.");
-            }
+            System.out.println("You already have 1 take this month.");
         }
     }
 
