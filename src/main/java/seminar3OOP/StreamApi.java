@@ -27,8 +27,8 @@ public class StreamApi {
         // Всем сотрд. выше 25 поднять зп.
 
         strings.stream()
-            .filter(it -> it.getAge() > 25)
-            .forEach(it -> it.setSalary(it.getSalary() + 50));
+            .filter(it -> it.getAge() > 25);
+//            .forEach(it -> it.setSalary(it.getSalary() + 50));
 
 
         List<String> lans = List.of("Java", "C", "C#", "Kotlin");
@@ -51,36 +51,36 @@ public class StreamApi {
     }
 }
 
-class Person {
-    private String name;
-    private int age;
-    private int salary;
-
-    public Person(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public int getSalary() {
-        return salary;
-    }
-
-    public void setSalary(int value) {
-        salary += value;
-    }
-
-    @Override
-    public String toString() {
-        return "Person{" + 
-        "name='" + name + "\'";
-    }
-}
+//class Person {
+//    private String name;
+//    private int age;
+//    private int salary;
+//
+//    public Person(String name, int age) {
+//        this.name = name;
+//        this.age = age;
+//    }
+//
+//    public String getName() {
+//        return name;
+//    }
+//
+//    public int getAge() {
+//        return age;
+//    }
+//
+//    public int getSalary() {
+//        return salary;
+//    }
+//
+//    public void setSalary(int value) {
+//        salary += value;
+//    }
+//
+//    @Override
+//    public String toString() {
+//        return "Person{" +
+//        "name='" + name + "\'";
+//    }
+//}
 

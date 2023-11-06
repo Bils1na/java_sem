@@ -73,6 +73,9 @@ class Person implements Comparable<Person> {
         this.age = age;
     }
 
+    public Person(String igor, int i) {
+    }
+
     public int getAge() {
         return this.age;
     }

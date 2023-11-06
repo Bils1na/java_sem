@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.util.Stack;
 
 public class DepositAccount extends AbstractAccount {
-    private final LocalDate lastTake = null;
+    private LocalDate lastTake = null;
 
     public DepositAccount(double value) {
         super(value);

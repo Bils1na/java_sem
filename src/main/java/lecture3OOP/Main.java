@@ -11,7 +11,7 @@ public class Main {
             public void m2() {
                 System.out.println("m2");
             }
-        } 
+        };
 
         foo1.m1();
 
@@ -24,7 +24,7 @@ public class Main {
             public void m2() {
                 System.out.println(">>>m2");
             }
-        } 
+        };
 
         foo2.m1();
     }

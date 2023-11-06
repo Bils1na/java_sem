@@ -1,4 +1,4 @@
-package Lesson_09.Ex002;
+package lecture3OOP.Ex002;
 
 
 import java.beans.Beans;
@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import lecture3OOP*.Ex002.ExBeverage.*;
+import lecture3OOP.Ex002.ExBeverage.*;
 
 public class Program {
     public static void main(String[] args) {

@@ -22,7 +22,7 @@ public class Program {
         Worker worker = new Worker(
             "Имя", "Фамилия", 23, 4567);
 
-        Iterator<Object> components = worker.iterator();
+//        Iterator<Object> components = worker.iterator();
 
         
     }
