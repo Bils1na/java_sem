@@ -1,4 +1,4 @@
-package algorithms.lecture4;
+package lecture4.algorithms;
 
 public class RedBlackTree {
     private Node root;
@@ -97,8 +97,6 @@ public class RedBlackTree {
         node.leftChild.color = Color.BLACK;
         node.color = Color.RED;
     }
-
-
 
 
     public class Node {

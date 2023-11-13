@@ -1,4 +1,4 @@
-package algorithms.lecture4;
+package lecture4.algorithms;
 
 public class Tree {
     Node root;
