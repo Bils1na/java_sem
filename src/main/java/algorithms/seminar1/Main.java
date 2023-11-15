@@ -3,8 +3,15 @@ package algorithms.seminar1;
 
 public class Main {
     public static void main(String[] args) {
-        int sum = sumNumbers(10);
-        System.out.println(sum);
+        // int sum = sumNumbers(10);
+        // System.out.println(sum);
+        long start = System.currentTimeMillis();
+        // System.out.println(fib(40));
+        int fib = fib(40);
+        System.out.println(System.currentTimeMillis() - start);
+        start = System.currentTimeMillis();
+        int fibFor = fibFor(40);
+        System.out.println(System.currentTimeMillis() - start);
     }
 
     public static int sumNumbers(int numbers) {
@@ -34,4 +41,33 @@ public class Main {
 
         return fib(position- 1) + fib(position - 2);
     }
+
+    public static int fibFor(int position) {
+        int firstDigit = 1;
+        int secondDigit = 1;
+        int thirdDigit = firstDigit + secondDigit;
+
+        if (position == 0) return 0;
+        if (position == 1 || position == 2) return 1;
+        if (position == 3) return thirdDigit;
+
+        for (int i = 4; i <= position; i++) {
+            firstDigit = secondDigit;
+            secondDigit = thirdDigit;
+            thirdDigit = firstDigit + secondDigit;
+        }
+        return thirdDigit;
+    }
+
+    public static void findSimpleNumbers(int max) {
+        for (int i = 1; i <= max; i++) {
+            boolean simple = true;
+            for (int j = 2; j < i; j++) {
+                if (i % j == 0) simple = false;
+            }
+            if (simple) {
+                System.out.println(i);
+            }
+        }
+    }   
 }
