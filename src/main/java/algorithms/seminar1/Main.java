@@ -30,6 +30,7 @@ public class Main {
 
             }
         }
+        return 0;
     } 
 
     public static int fib(int position) {
