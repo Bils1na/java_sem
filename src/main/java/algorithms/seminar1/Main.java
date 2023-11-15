@@ -1,5 +1,6 @@
 package algorithms.seminar1;
 
+import java.util.stream.IntStream;
 
 public class Main {
     public static void main(String[] args) {
@@ -22,14 +23,14 @@ public class Main {
         return sum;
     }
     
-    // public static int findCombination(int k, int n) {
-    //     int count = 0;
-    //     for (int i = 0; i < n; i++) {
-    //         for (int j = 0; j < n; j++) {
+    public static int findCombination(int k, int n) {
+        int count = 0;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
 
-    //         }
-    //     }
-    // } 
+            }
+        }
+    } 
 
     public static int fib(int position) {
         if (position == 1) {
@@ -70,4 +71,8 @@ public class Main {
             }
         }
     }   
+
+    public static boolean isPrime(int num) {
+        return IntStream.rangeClosed(2, num / 2).anyMatch(n -> num % n != 0);
+    }
 }
