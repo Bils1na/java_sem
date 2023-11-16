@@ -1,7 +1,25 @@
 package algorithms.seminar2;
 
+import java.util.Random;
+
 public class Main {
     public static void main(String[] args) {
+        int[] numbers = new int[10000];
+        Random rnd = new Random();
+        
+        for (int i = 0; i < numbers.length; i++) {
+            array[i] = rnd.nextInt(10000);
+        }
+        long start = System.currentTimeMillis();
+        bubbleSort(numbers);
+        System.out.println(System.currentTimeMillis() - start);
+
+        for (int i = 0; i < numbers.length; i++) {
+            array[i] = rnd.nextInt(10000);
+        }
+        start = System.currentTimeMillis();
+        quickSort(numbers, 0 ,numbers.length - 1);
+        System.out.println(System.currentTimeMillis() - start);
 
     }
 
@@ -18,13 +36,13 @@ public class Main {
     }
 
     public static void quickSort(int[] array, int start, int end) {
-// 		if (array.length == 0) {
-// 			return;
-// 		}
+		if (array.length == 0) {
+			return;
+		}
 
-// 		if (start >= end) {
-// 			return;
-// 		}
+		if (start >= end) {
+			return;
+		}
 		
 		int left = start;
 		int right = end;
