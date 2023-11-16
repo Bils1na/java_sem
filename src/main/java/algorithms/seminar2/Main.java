@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         int[] numbers = new int[10000];
         Random rnd = new Random();
-        
+
         for (int i = 0; i < numbers.length; i++) {
             array[i] = rnd.nextInt(10000);
         }
@@ -73,4 +73,38 @@ public class Main {
 			quickSort(array, left, end);
 		}
 	}
+
+    public static int binarySearch(int[] array, int value, int min, int max) {
+        // int midPoint;
+        // if (max < min) {
+        //     return -1;
+        // } else {
+        //     midPoint = (max - min) / 2 + min;
+        // }
+
+        // if (array[midPoint] < value) {
+        //     return binarySearch(array, value, midPoint + 1, max);
+        // } else if (array[midPoint] > value) {
+        //     return binarySearch(array, value, min, midPoint - 1);
+        // } else {
+        //     return midPoint;
+        // }
+        int left = 0;
+        int right = array.length;
+        int index = -1;
+
+        while(left <= right) {
+            int midPoint = (right - left) / 2 + left;
+            if (array[midPoint] < value) {
+                left = midPoint + 1;
+            } else if (array[midPoint] > value) {
+                right = midPoint - 1;
+            } else if (array[midPoint] == value) {
+                index = midPoint;
+                break;
+            }
+        }
+
+        return index;
+    }
 }
