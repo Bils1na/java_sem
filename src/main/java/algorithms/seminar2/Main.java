@@ -18,34 +18,41 @@ public class Main {
     }
 
     public static void quickSort(int[] array, int start, int end) {
-        int left = start;
-        int right = end;
-        int pivot = array[(end - start) / 2 + start];
+// 		if (array.length == 0) {
+// 			return;
+// 		}
 
-        while (left <= right) {
-            while (array[left] < pivot) {
-                left++;
-            }
-            while (array[right] > pivot) {
-                right--;
-            }
-            if(left <= right) {
-                if(left < right) {
-                    int temp = array[left];
-                    array[left] = array[right];
-                    array[right] = temp;
-                }
-            }
-            left++;
-            right--;
-        }
+// 		if (start >= end) {
+// 			return;
+// 		}
+		
+		int left = start;
+		int right = end;
+		int pivot = array[(end - start) / 2 + start];
 
-        if (left < end) {
-            quickSort(array, left, end);
-        }
+		while (left <= right) {
+			while (array[left] < pivot) {
+				left++;
+			}
+			while (array[right] > pivot) {
+				right--;
+			}
+			if (left <= right) {
+				int temp = array[left];
+				array[left] = array[right];
+				array[right] = temp;			
+				
+				left++;
+				right--;
+			}
+		} 
+		
+		if (left < end) {
+			quickSort(array, start, right);
+		}
 
-        if (right > start) {
-            quickSort(array, start, rigth);
-        }
-    }
+		if (end > left) {
+			quickSort(array, left, end);
+		}
+	}
 }
