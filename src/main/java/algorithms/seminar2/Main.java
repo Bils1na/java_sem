@@ -35,9 +35,9 @@ public class Main {
                     array[left] = array[right];
                     array[right] = temp;
                 }
-                left++;
-                right--;
             }
+            left++;
+            right--;
         }
 
         if (left < end) {
