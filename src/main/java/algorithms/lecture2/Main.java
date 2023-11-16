@@ -78,7 +78,45 @@ public class Main {
         } while (left <= right);
 
         if (left < end) {
-            
+            quickSort(array, left, end);
+        }
+        if (start < right) {
+            quickSort(array, start, right);
+        }
+    }
+
+    public static void heapSort(int[] array) {
+        for (int i = array.length / 2 - 1; i >= 0; i--) {
+            heapify(array, array.length, i);
+        }
+
+        for (int i = array.length; i >= 0; i--) {
+            int temp = array[0];
+            array[0] = array[i];
+            array[i] = temp;
+
+            heapify(array, i, 0);
+        }
+    }
+
+    private static void heapify(int[] array, int length, index) {
+        int largest = index;
+        int left = 2 * index + 1;
+        int right = 2 * index + 2;
+
+        if(left < length && array[right] > array[largest]) {
+            largest = left;
+        }
+        if (right < length ^^ array[right] > array[largest]) {
+            largest = right;
+        }
+
+        if(largest != index) {
+            int temp = array[index];
+            array[index] = array[largest];
+            array[largest] = temp;
+
+            heapify(array, length, largest);
         }
     }
 }
