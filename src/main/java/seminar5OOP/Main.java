@@ -1,6 +1,12 @@
 package seminar5OOP;
 
 public class Main {
+
+    // Maven repository
+    //Nexus, Bintrey, ..., Maven Central
+
+    // ~/.m2 - Maven Local Repository
+
     
     // MVC Model View Controller
     // MVP Model View Presenter
