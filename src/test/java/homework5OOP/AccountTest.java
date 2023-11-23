@@ -36,8 +36,8 @@ class AccountTest {
         Account testObject = new Account();
 
         testObject.put(100);
-        testObject.take(55);
-        Assertions.assertEquals("Balance: 45.0$", testObject.getAmount());
+        testObject.take(5);
+        Assertions.assertEquals("Balance: 95.0$", testObject.getAmount());
     }
 
 
