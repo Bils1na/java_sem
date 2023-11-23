@@ -73,12 +73,12 @@ class JUnitDemoTest {
             }
         };
 
-        try {
-            executable.execute();
-            Assertions.fail();
-        } catch (Throwable e) {
-            Assertions.assertEquals(e.getClass(). );
-        }
+//        try {
+//            executable.execute();
+//            Assertions.fail();
+//        } catch (Throwable e) {
+//            Assertions.assertEquals(e.getClass(). );
+//        }
 
         Assertions.assertThrows(JUnitDemo.NegativeAgeException.class, () -> testObject.validateAge(-5));
         Assertions.assertThrows(JUnitDemo.NegativeAgeException.class, () -> testObject.validateAge(0));
